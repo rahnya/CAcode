@@ -1,0 +1,60 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+@mixin card {
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-md);
+}
+
+@mixin pill-button($bg: $ca-primary, $color: white) {
+  background: $bg;
+  color: $color;
+  border: none;
+  border-radius: $radius-pill;
+  padding: 8px 16px;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: color.adjust($bg, $lightness: -8%);
+  }
+
+  &:active {
+    background: color.adjust($bg, $lightness: -14%);
+  }
+}
+
+@mixin badge($bg: $ca-bg-section, $color: $ca-text) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: $bg;
+  color: $color;
+  border-radius: $radius-pill;
+  padding: 4px 10px;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin safe-bottom-padding($extra: 0px) {
+  padding-bottom: calc(#{$extra} + env(safe-area-inset-bottom, 0px));
+}

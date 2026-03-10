@@ -1,0 +1,157 @@
+@use '../../styles/variables' as *;
+
+.createPostOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.createPost {
+  background: var(--color-bg-card);
+  border-radius: $radius-card $radius-card 0 0;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  animation: slideUp 0.25s ease;
+}
+
+.createPostHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.createPostClose {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+
+  &:hover {
+    background: var(--color-bg-section);
+  }
+}
+
+.createPostTextarea {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-input-bg);
+  border-radius: $radius-standard;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  resize: none;
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+}
+
+.createPostFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.createPostCharCount {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.createPostSubmit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: $ca-primary;
+  color: white;
+  border-radius: $radius-pill;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: $ca-primary-hover;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.createPostOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.createPostOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.createPostOptionInput {
+  flex: 1;
+  padding: 10px 12px;
+  background: var(--color-input-bg);
+  border-radius: $radius-standard;
+  font-size: 0.85rem;
+  color: var(--color-text);
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+}
+
+.createPostOptionRemove {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+
+  &:hover {
+    background: var(--color-bg-section);
+    color: #e62f44;
+  }
+}
+
+.createPostAddOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  color: $ca-primary;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.regionDashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.regionDashboardContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  -webkit-overflow-scrolling: touch;
+}

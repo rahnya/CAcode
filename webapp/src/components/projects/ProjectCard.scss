@@ -1,0 +1,214 @@
+@use '../../styles/variables' as *;
+
+.projectCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.projectCardImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+}
+
+.projectCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 40%,
+    var(--color-card-overlay-mid) 65%,
+    var(--color-card-overlay-end) 85%,
+    var(--color-bg) 100%
+  );
+}
+
+.projectCardTopRow {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.projectCardBadges {
+  display: flex;
+  gap: 6px;
+
+  .badge {
+    background: var(--color-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+.projectCardCounter {
+  padding: 4px 10px;
+  background: var(--color-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: $radius-pill;
+  color: var(--color-text);
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.projectCardSwipeHint {
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 16px;
+  border-radius: $radius-pill;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  z-index: 10;
+  animation: swipeHintPulse 2s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes swipeHintPulse {
+  0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 0.6; transform: translateX(-50%) translateY(-6px); }
+}
+
+.projectCardHeart {
+  position: absolute;
+  right: 12px;
+  top: -56px;
+  z-index: 11;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.projectCardHeartActive {
+  background: rgba(230, 47, 68, 0.2);
+}
+
+.projectCardInfo {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 16px;
+  z-index: 10;
+  color: var(--color-text);
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-md);
+}
+
+.projectCardTitle {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.projectCardDescription {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projectCardFunding {
+  margin-bottom: 8px;
+}
+
+.projectCardProgressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.projectCardProgressFill {
+  height: 100%;
+  background: $ca-tertiary;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.projectCardFundingText {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
+.projectCardAmount {
+  font-family: $font-heading;
+  font-weight: 700;
+  color: var(--color-accent-funding);
+}
+
+.projectCardGoal {
+  color: var(--color-text);
+}
+
+.projectCardAuthor {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.projectCardDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 12px;
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  transition: background 0.15s ease, transform 0.1s ease;
+
+  &:active {
+    background: var(--color-border);
+    transform: scale(0.98);
+  }
+}

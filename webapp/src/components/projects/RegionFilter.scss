@@ -1,0 +1,110 @@
+@use '../../styles/variables' as *;
+
+.regionFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  gap: 12px;
+}
+
+.regionFilterDropdown {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.regionFilterTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: $radius-standard;
+  background: var(--color-bg-section);
+  color: var(--color-text);
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.82rem;
+  width: 100%;
+  text-align: left;
+  transition: background 0.15s ease;
+
+  span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    color: var(--color-text-secondary);
+  }
+
+  &:hover {
+    background: var(--color-border);
+  }
+}
+
+.regionFilterTriggerOpen svg {
+  transform: rotate(180deg);
+}
+
+.regionFilterMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--color-bg-card);
+  border-radius: $radius-standard;
+  box-shadow: var(--shadow-lg);
+  z-index: 30;
+  overflow: hidden;
+}
+
+.regionFilterOption {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  text-align: left;
+  transition: background 0.1s ease;
+
+  &:hover {
+    background: var(--color-bg-section);
+  }
+}
+
+.regionFilterOptionActive {
+  color: $ca-primary;
+  font-weight: 700;
+}
+
+.regionFilterSuivis {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: $radius-pill;
+  background: var(--color-bg-section);
+  color: var(--color-text-secondary);
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--color-border);
+  }
+}
+
+.regionFilterSuivisActive {
+  background: rgba($ca-red, 0.1);
+  color: $ca-red;
+}

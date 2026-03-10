@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+
+.leaderboard {
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+}
+
+.leaderboardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--color-text);
+
+  h3 {
+    font-size: 0.95rem;
+  }
+}
+
+.leaderboardList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.leaderboardRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-radius: $radius-standard;
+  transition: background 0.15s ease;
+}
+
+.leaderboardRowTop {
+  background: var(--color-bg-section);
+}
+
+.leaderboardRank {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 1rem;
+  width: 24px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.leaderboardInfo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leaderboardTitle {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leaderboardFollows {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}

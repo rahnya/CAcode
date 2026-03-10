@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.statsOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.statsOverviewCard {
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statsOverviewIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-standard;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statsOverviewValue {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+
+.statsOverviewLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}

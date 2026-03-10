@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+
+.pollDisplay {
+  margin-top: 10px;
+}
+
+.pollDisplayQuestion {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.pollDisplayOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pollDisplayOption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 2px solid var(--color-bg-section);
+  border-radius: $radius-standard;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+  text-align: left;
+
+  &:not(:disabled):hover {
+    border-color: $ca-primary;
+  }
+}
+
+.pollDisplayOptionVoted {
+  cursor: default;
+}
+
+.pollDisplayOptionSelected {
+  border-color: $ca-primary;
+}
+
+.pollDisplayBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba($ca-primary, 0.1);
+  border-radius: $radius-standard;
+  transition: width 0.5s ease;
+}
+
+.pollDisplayText {
+  position: relative;
+  z-index: 1;
+}
+
+.pollDisplayPct {
+  position: relative;
+  z-index: 1;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: $ca-primary;
+}
+
+.pollDisplayTotal {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}

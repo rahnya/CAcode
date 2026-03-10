@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+
+.projectsTab {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .regionFilter {
+    background: var(--color-bg);
+    position: relative;
+    z-index: 20;
+  }
+}
+
+.projectsTabScroller {
+  flex: 1;
+  overflow: hidden;
+}

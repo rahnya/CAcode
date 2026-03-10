@@ -1,0 +1,38 @@
+// CA Brand Colors (static — unchanged across themes)
+$ca-primary: #007461;
+$ca-primary-hover: #075144;
+$ca-primary-pressed: #004652;
+$ca-secondary: #0a94a8;
+$ca-secondary-alt: #33a9be;
+$ca-tertiary: #6ea371;
+$ca-red: #e62f44;
+$ca-text: #19212d;
+$ca-text-secondary: #4d5571;
+$ca-bg: #ffffff;
+$ca-bg-section: #f6f7f9;
+$ca-bg-dark: #19212d;
+
+// Typography
+$font-heading: 'Montserrat', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+// Radii
+$radius-card: 16px;
+$radius-pill: 999px;
+$radius-standard: 8px;
+
+// Safe area
+$safe-bottom: env(safe-area-inset-bottom);
+
+// Category colors
+$category-colors: (
+  'Agriculture': #6ea371,
+  'Environnement': #0a94a8,
+  'Social': #e6a817,
+  'Culture': #c45baa,
+  'Sport': #e62f44,
+  'Education': #5b7fc4,
+  'Santé': #d4704f,
+  'Numérique': #7c5bc4,
+);
+

@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 16px;
+  padding-top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+}
+
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $ca-primary;
+}
+
+.headerTitle {
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}

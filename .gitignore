@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+webapp/dist/
+mobapp/dist/
+mobapp/web-build/
+
+# Expo
+.expo/
+expo-env.d.ts
+
+# Native (generated)
+mobapp/android/
+mobapp/ios/
+mobapp/.kotlin/
+*.orig.*
+
+# Signing keys
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude
+.claude/

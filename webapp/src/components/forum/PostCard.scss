@@ -1,0 +1,83 @@
+@use '../../styles/variables' as *;
+
+.postCard {
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-sm);
+  padding: 14px 16px;
+}
+
+.postCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.postCardAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.postCardMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.postCardAuthor {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.postCardTime {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+}
+
+.postCardContent {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.postCardActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.postCardAction {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 4px 0;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  span {
+    font-family: $font-heading;
+    font-weight: 600;
+  }
+}
+
+.postCardActionLiked {
+  color: $ca-red;
+
+  &:hover {
+    color: $ca-red;
+  }
+}
+
+.postCardActionStatic {
+  cursor: default;
+}

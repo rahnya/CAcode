@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.bottomNav {
+  display: flex;
+  align-items: stretch;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 23px);
+  z-index: 100;
+}
+
+.bottomNavTab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 0 6px;
+  color: var(--color-text-secondary);
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.bottomNavTabActive {
+  color: $ca-primary;
+
+  .bottomNavIndicator {
+    opacity: 1;
+  }
+}
+
+.bottomNavIndicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: $ca-primary;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.bottomNavLabel {
+  font-family: $font-heading;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

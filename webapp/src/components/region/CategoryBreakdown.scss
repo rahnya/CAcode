@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+
+.categoryBreakdown {
+  background: var(--color-bg-card);
+  border-radius: $radius-card;
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+}
+
+.categoryBreakdownTitle {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.categoryBreakdownBars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoryBreakdownRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.categoryBreakdownLabel {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.categoryBreakdownBarTrack {
+  flex: 1;
+  height: 22px;
+  background: var(--color-bg-section);
+  border-radius: $radius-standard;
+  overflow: hidden;
+}
+
+.categoryBreakdownBarFill {
+  height: 100%;
+  border-radius: $radius-standard;
+  min-width: 4px;
+  transition: width 0.5s ease;
+}
+
+.categoryBreakdownCount {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  width: 20px;
+  flex-shrink: 0;
+}
